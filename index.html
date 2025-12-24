@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SOC 2101 Handnotes</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
@@ -15,9 +16,10 @@
         </div>
     </header>
 
-    <main class="container main-content">
+    <main class="container main-content-container">
         
         <section id="home" class="active">
+            
             <div class="welcome-box">
                 <h2>Hi.....! 👋</h2>
                 <p>Which notes are you looking for today?</p>
@@ -25,32 +27,45 @@
 
             <div class="term-grid">
                 <div class="term-card mid" onclick="showSection('mid')">
-                    <div class="icon">📘</div>
+                    <div class="icon"><i class="fas fa-book-open"></i></div>
                     <h3>Mid Term</h3>
                     <p>Topics 1-9</p>
                 </div>
 
                 <div class="term-card final" onclick="showSection('final')">
-                    <div class="icon">🎓</div>
+                    <div class="icon"><i class="fas fa-graduation-cap"></i></div>
                     <h3>Final Term</h3>
                     <p>Upcoming...</p>
                 </div>
             </div>
 
-            <div class="tribute-container">
-                <div class="tribute-content">
-                    <p class="prayer-request">
-                        If this small effort brings you even a little benefit, please keep <strong>Hadi bhai</strong> in your prayers.
-                    </p>
-                    <hr class="tribute-divider">
-                    <p class="eulogy">
-                        "As I was completing this work, our country lost not just a man, but a fearless voice—<br>
-                        a voice that dared to speak when silence was easier."
-                    </p>
-                    <div class="tribute-person">
-                        <span class="name">Sharif Osman Bin Hadi</span>
-                        <span class="years">(1993 – ∞)</span>
-                        <span class="date">18 December 2025</span>
+            <div class="tribute-spacer">
+                <div class="tribute-card-pitch">
+                    
+                    <div class="tribute-col-img-wrapper">
+                        <img src="images/hadi_bhai.jpg" alt="Sharif Osman Bin Hadi" class="tribute-photo-card">
+                    </div>
+                    
+                    <div class="tribute-col-text scroll-hidden">
+                        
+                        <p class="prayer-request">
+                            <i class="fas fa-hands-praying"></i> If this small effort brings you even a little benefit, please keep <strong>Hadi bhai</strong> in your prayers.
+                        </p>
+
+                        <hr class="tribute-divider">
+                        
+                        <blockquote class="eulogy">
+                            As I was completing this work, our country lost not just a man, but a fearless voice—a voice that dared to speak when silence was easier.
+                        </blockquote>
+
+                        <div class="tribute-footer">
+                            <h2 class="name">SHARIF OSMAN BIN HADI</h2>
+                            <p class="dates">
+                                <span class="years">(1993 – ∞)</span> 
+                                <span class="sep">|</span> 
+                                <span class="death-date">18 December 2025</span>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -64,10 +79,9 @@
             </div>
 
             <div class="info-box">
-                <h4>📝 A Note on Legibility</h4>
+                <h4><i class="fas fa-pen-fancy"></i> A Note on Legibility</h4>
                 <p>
-                    My handwriting has its own unique "font" which might occasionally be tricky to decipher. 😅 
-                    If you find any word unclear:
+                    My handwriting has its own unique "font" which might occasionally be tricky to decipher. 😅 If you find any word unclear:
                 </p>
                 <ul>
                     <li><strong>Step 1:</strong> Take a screenshot and ask <em>ChatGPT</em> to transcribe it (it works wonders!).</li>
@@ -76,53 +90,60 @@
                 <p class="small-text"><em>*Please use Step 2 only if absolutely necessary. Happy studying!</em></p>
             </div>
 
-            <p class="instruction">Click on a topic to open the notes in Google Drive.</p>
+            <div class="resources-container">
+                <h3 class="res-title">📚 Extra Resources</h3>
+                
+                <div class="resources-grid">
+                    <a href="notes/mid_solve.pdf" target="_blank" class="resource-card solve-card">
+                        <span class="icon"><i class="fas fa-check-circle"></i></span>
+                        <span class="text">Mid Question Solves</span>
+                        <span class="arrow">➔</span>
+                    </a>
+
+                    <div class="resource-group">
+                        <div class="resource-card question-card" onclick="toggleBatchList()">
+                            <span class="icon"><i class="fas fa-question-circle"></i></span>
+                            <span class="text">Previous Mid Questions</span>
+                            <span class="arrow" id="batchArrow">▼</span>
+                        </div>
+                        <div id="batchList" class="batch-list hidden">
+                            <a href="notes/question_243.pdf" target="_blank" class="batch-btn">Batch 243</a>
+                            <a href="notes/question_251.pdf" target="_blank" class="batch-btn">Batch 251</a>
+                            <a href="notes/question_252.pdf" target="_blank" class="batch-btn">Batch 252</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="instruction" style="margin-top: 25px;">Click on a topic to open the PDF note in a new tab.</p>
 
             <div class="topic-list">
-                <a href="https://drive.google.com/drive/folders/1cXWLFnnDicWFkFY7oSdAAePbqzUe0nqE?usp=sharing" target="_blank" class="topic-card">
-                    <span class="topic-num">01</span>
-                    <span class="topic-name">Society & Transformation of Society</span>
-                    <span class="arrow">➔</span>
+                <a href="notes/topic1.pdf" target="_blank" class="topic-card">
+                    <span class="topic-num">01</span><span class="topic-name">Society & Transformation of Society</span><span class="arrow"><i class="fas fa-arrow-right"></i></span>
                 </a>
-                <a href="https://drive.google.com/drive/folders/1cwddGSjPk8526lyKM51g200AwtY5_z1u?usp=sharing" target="_blank" class="topic-card">
-                    <span class="topic-num">02</span>
-                    <span class="topic-name">Industrial Revolution & Its Impacts</span>
-                    <span class="arrow">➔</span>
+                <a href="notes/topic2.pdf" target="_blank" class="topic-card">
+                    <span class="topic-num">02</span><span class="topic-name">Industrial Revolution & Its Impacts</span><span class="arrow"><i class="fas fa-arrow-right"></i></span>
                 </a>
-                <a href="https://drive.google.com/drive/folders/19JyLaiQk4y-fJGYOXu9dwaXHkcGAd1Q4?usp=sharing" target="_blank" class="topic-card">
-                    <span class="topic-num">03</span>
-                    <span class="topic-name">Development as a Multidimensional Concept</span>
-                    <span class="arrow">➔</span>
+                <a href="notes/topic3.pdf" target="_blank" class="topic-card">
+                    <span class="topic-num">03</span><span class="topic-name">Development as a Multidimensional Concept</span><span class="arrow"><i class="fas fa-arrow-right"></i></span>
                 </a>
-                <a href="https://drive.google.com/drive/folders/1gD708pWT16esVZFDOstvPPjoEvOrWxZ-?usp=sharing" target="_blank" class="topic-card">
-                    <span class="topic-num">04</span>
-                    <span class="topic-name">SDG and Sustainability</span>
-                    <span class="arrow">➔</span>
+                <a href="notes/topic4.pdf" target="_blank" class="topic-card">
+                    <span class="topic-num">04</span><span class="topic-name">SDG and Sustainability</span><span class="arrow"><i class="fas fa-arrow-right"></i></span>
                 </a>
-                <a href="https://drive.google.com/drive/folders/1lSlMut3peA6LqnucU3bTlED2jveYaNrO?usp=sharing" target="_blank" class="topic-card">
-                    <span class="topic-num">05</span>
-                    <span class="topic-name">Responsible Consumption (SDG 12)</span>
-                    <span class="arrow">➔</span>
+                <a href="notes/topic5.pdf" target="_blank" class="topic-card">
+                    <span class="topic-num">05</span><span class="topic-name">Responsible Consumption (SDG 12)</span><span class="arrow"><i class="fas fa-arrow-right"></i></span>
                 </a>
-                <a href="https://drive.google.com/drive/folders/1S9pc7yDeIqfZkY4ayNiUqdHwOWFjgM1L?usp=sharing" target="_blank" class="topic-card">
-                    <span class="topic-num">06</span>
-                    <span class="topic-name">Modern Society</span>
-                    <span class="arrow">➔</span>
+                <a href="notes/topic6.pdf" target="_blank" class="topic-card">
+                    <span class="topic-num">06</span><span class="topic-name">Modern Society</span><span class="arrow"><i class="fas fa-arrow-right"></i></span>
                 </a>
-                <a href="https://drive.google.com/drive/folders/1HF5jqN1VmWwmh-n4O9uoNE1aKGSBe2dj?usp=sharing" target="_blank" class="topic-card">
-                    <span class="topic-num">07</span>
-                    <span class="topic-name">Renewable Energy</span>
-                    <span class="arrow">➔</span>
+                <a href="notes/topic7.pdf" target="_blank" class="topic-card">
+                    <span class="topic-num">07</span><span class="topic-name">Renewable Energy</span><span class="arrow"><i class="fas fa-arrow-right"></i></span>
                 </a>
-                <a href="https://drive.google.com/drive/folders/1p1R-ltk8fXg5vxSB065GRthDsl9Jg217?usp=sharing" target="_blank" class="topic-card">
-                    <span class="topic-num">08</span>
-                    <span class="topic-name">Solid Waste Management</span>
-                    <span class="arrow">➔</span>
+                <a href="notes/topic8.pdf" target="_blank" class="topic-card">
+                    <span class="topic-num">08</span><span class="topic-name">Solid Waste Management</span><span class="arrow"><i class="fas fa-arrow-right"></i></span>
                 </a>
-                <a href="https://drive.google.com/drive/folders/1E3cmPrqpglBMzdSu7415SK6XFLkIwSrc?usp=sharing" target="_blank" class="topic-card">
-                    <span class="topic-num">09</span>
-                    <span class="topic-name">Industrial & Development Crisis on Environment</span>
-                    <span class="arrow">➔</span>
+                <a href="notes/topic9.pdf" target="_blank" class="topic-card">
+                    <span class="topic-num">09</span><span class="topic-name">Industrial & Development Crisis on Environment</span><span class="arrow"><i class="fas fa-arrow-right"></i></span>
                 </a>
             </div>
         </section>
@@ -132,7 +153,6 @@
                 <button class="back-btn" onclick="showSection('home')">← Back</button>
                 <h2>🎓 Final Term</h2>
             </div>
-
             <div class="message-box">
                 <div class="emoji">🚧</div>
                 <h3>Mid is ongoing...</h3>
