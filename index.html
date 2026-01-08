@@ -35,7 +35,7 @@
                 <div class="term-card final" onclick="showSection('final')">
                     <div class="icon"><i class="fas fa-graduation-cap"></i></div>
                     <h3>Final Term</h3>
-                    <p>Upcoming...</p>
+                    <p>Ongoing...</p>
                 </div>
             </div>
 
@@ -148,47 +148,42 @@
             </div>
         </section>
 
-        <section id="final" class="hidden">
+       <section id="final" class="hidden">
     <div class="section-header">
         <button class="back-btn" onclick="showSection('home')">← Back</button>
         <h2>🎓 Final Term Topics</h2>
     </div>
 
-    <div class="info-box" style="border-left-color: #ef4444; background-color: #fef2f2;">
+    <div class="info-box" style="border-left-color: #ef4444; background-color: #fef2f2; margin-bottom: 30px;">
         <h4 style="color: #b91c1c;"><i class="fas fa-robot"></i> Caution: AI-Enhanced Notes</h4>
-        
-            <div class="notice">
-    <p>
-        <strong>Notice:</strong><br>
-        These final-term notes have been edited with the assistance of AI. While class lectures and official slides were used as primary references, there remains a possibility that AI-generated content may contain inaccuracies or unintended hallucinations.
-    </p>
-    <p class="small-text">
-        <em>*If you encounter any confusion while studying, please consult the original lecture slides for verification.</em>
-    </p>
-</div>
-
+        <p>
+            <strong>Notice:</strong> These final-term notes have been edited with the assistance of AI. While class lectures and official slides were used as primary references, there remains a possibility that AI-generated content may contain inaccuracies or unintended hallucinations.
+        </p>
+        <p class="small-text"><em>*If you encounter any confusion while studying, please consult the original lecture slides for verification.</em></p>
+    </div>
 
     <div class="resources-container">
         <h3 class="res-title">📚 Final Resources</h3>
         
         <div class="resources-grid">
-            <div class="resource-group">
-                <div class="resource-card question-card" onclick="toggleFinalBatchList()">
-                    <span class="icon"><i class="fas fa-question-circle"></i></span>
-                    <span class="text">Previous Final Questions</span>
-                    <span class="arrow" id="finalBatchArrow">▼</span>
-                </div>
-                <div id="finalBatchList" class="batch-list hidden">
-                    <a href="https://drive.google.com/drive/folders/1XAJQx45u_ZL-LPZAMtcI5eOJ_Hwv_KX2" target="_blank" class="batch-btn">Google Drive Folder</a>
-                    <a href="https://nurulalamador.github.io/UIUQuestionBank/questions.html?term=final&id=SOC2101" target="_blank" class="batch-btn">UIU Question Bank</a>
-                </div>
-            </div>
+            <a href="https://drive.google.com/drive/folders/1XAJQx45u_ZL-LPZAMtcI5eOJ_Hwv_KX2" target="_blank" class="resource-card question-card">
+                <span class="icon"><i class="fas fa-folder-open"></i></span>
+                <span class="text">Previous Final Questions (Drive)</span>
+                <span class="arrow">➔</span>
+            </a>
+
+            <a href="https://nurulalamador.github.io/UIUQuestionBank/questions.html?term=final&id=SOC2101" target="_blank" class="resource-card question-card">
+                <span class="icon"><i class="fas fa-university"></i></span>
+                <span class="text">UIU Question Bank</span>
+                <span class="arrow">➔</span>
+            </a>
 
             <a href="https://www.ieee.org/about/corporate/governance/p7-8" target="_blank" class="resource-card" style="background-color: #f0f9ff; color: #0369a1; border-color: #bae6fd;">
                 <span class="icon"><i class="fas fa-balance-scale"></i></span>
                 <span class="text">IEEE CODES OF ETHICS</span>
                 <span class="arrow">➔</span>
             </a>
+
             <a href="https://www.acm.org/code-of-ethics" target="_blank" class="resource-card" style="background-color: #f0f9ff; color: #0369a1; border-color: #bae6fd;">
                 <span class="icon"><i class="fas fa-gavel"></i></span>
                 <span class="text">ACM CODES OF ETHICS</span>
@@ -197,7 +192,7 @@
         </div>
     </div>
 
-    <h3 class="res-title" style="margin-top: 30px;">📝 After Mid</h3>
+    <h3 class="res-title" style="margin-top: 40px;">📝 After Mid</h3>
     <p class="instruction">Click on a lecture to open the PDF note.</p>
 
     <div class="topic-list">
@@ -208,7 +203,7 @@
         </a>
     </div>
 
-    <div class="message-box" style="margin-top: 40px; padding: 20px; border-color: #16a34a;">
+    <div class="message-box" style="margin-top: 40px; padding: 20px; border-color: #16a34a; border-style: dashed; background-color: #f0fdf4;">
         <p style="margin: 0; color: #16a34a; font-weight: 500;">
             <i class="fas fa-spinner fa-spin"></i> Lecture is ongoing... Site will be updated regularly.
         </p>
