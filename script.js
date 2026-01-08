@@ -45,3 +45,16 @@ document.addEventListener("DOMContentLoaded", function() {
          observer.observe(tributeText);
     }
 });
+// 4. Toggle "Previous Final Questions" Dropdown
+function toggleFinalBatchList() {
+    const list = document.getElementById('finalBatchList');
+    const arrow = document.getElementById('finalBatchArrow');
+    
+    if (list.classList.contains('hidden')) {
+        list.classList.remove('hidden');
+        arrow.classList.add('rotate-arrow');
+    } else {
+        list.classList.add('hidden');
+        arrow.classList.remove('rotate-arrow');
+    }
+}
