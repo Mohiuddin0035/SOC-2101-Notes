@@ -13,7 +13,7 @@ function showSection(sectionId) {
     window.scrollTo(0, 0);
 }
 
-// 2. Generic Toggle Function
+// 2. Generic Toggle Helper
 function toggleVisibility(listId, arrowId) {
     const list = document.getElementById(listId);
     const arrow = document.getElementById(arrowId);
@@ -26,16 +26,19 @@ function toggleVisibility(listId, arrowId) {
     }
 }
 
-// 3. Category Toggles
+// 3. Category Toggles (Final)
 function toggleQSList() { toggleVisibility('qsList', 'qsArrow'); }
 function toggleRPList() { toggleVisibility('rpList', 'rpArrow'); }
 function toggleCEList() { toggleVisibility('ceList', 'ceArrow'); }
 
-// 4. Trimester Toggles
+// 4. Nested Toggles (Final)
 function toggleTrimesterList() { toggleVisibility('trimesterList', 'trimesterArrow'); }
 function toggleTrimesterSolList() { toggleVisibility('trimesterSolList', 'trimesterSolArrow'); }
 
-// 5. Scroll Animation
+// 5. Mid Term Toggle
+function toggleBatchList() { toggleVisibility('batchList', 'batchArrow'); }
+
+// 6. Scroll Animation
 document.addEventListener("DOMContentLoaded", function() {
     const tributeText = document.querySelector('.tribute-col-text');
     const observer = new IntersectionObserver((entries) => {
