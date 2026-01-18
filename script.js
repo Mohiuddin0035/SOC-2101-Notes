@@ -19,13 +19,12 @@ function toggleBatchList() {
     const list = document.getElementById('batchList');
     const arrow = document.getElementById('batchArrow');
     
-    // Toggle hidden class
     if (list.classList.contains('hidden')) {
         list.classList.remove('hidden');
-        arrow.classList.add('rotate-arrow'); // Arrow points up
+        arrow.classList.add('rotate-arrow');
     } else {
         list.classList.add('hidden');
-        arrow.classList.remove('rotate-arrow'); // Arrow points down
+        arrow.classList.remove('rotate-arrow');
     }
 }
 
@@ -45,10 +44,27 @@ document.addEventListener("DOMContentLoaded", function() {
          observer.observe(tributeText);
     }
 });
-// 4. Toggle "Previous Final Questions" Dropdown
+
+// 4. Toggle "Previous Final Questions" Dropdown (If still needed)
 function toggleFinalBatchList() {
     const list = document.getElementById('finalBatchList');
     const arrow = document.getElementById('finalBatchArrow');
+    
+    if (list && arrow) {
+        if (list.classList.contains('hidden')) {
+            list.classList.remove('hidden');
+            arrow.classList.add('rotate-arrow');
+        } else {
+            list.classList.add('hidden');
+            arrow.classList.remove('rotate-arrow');
+        }
+    }
+}
+
+// 5. Toggle "Last 3 Trimester Questions" Dropdown
+function toggleTrimesterList() {
+    const list = document.getElementById('trimesterList');
+    const arrow = document.getElementById('trimesterArrow');
     
     if (list.classList.contains('hidden')) {
         list.classList.remove('hidden');

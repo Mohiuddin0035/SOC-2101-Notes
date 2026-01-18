@@ -148,73 +148,109 @@
             </div>
         </section>
 
-       <section id="final" class="hidden">
-    <div class="section-header">
-        <button class="back-btn" onclick="showSection('home')">← Back</button>
-        <h2>🎓 Final Term Topics</h2>
-    </div>
+        <section id="final" class="hidden">
+            <div class="section-header">
+                <button class="back-btn" onclick="showSection('home')">← Back</button>
+                <h2>🎓 Final Term Topics</h2>
+            </div>
 
-    <div class="info-box" style="border-left-color: #ef4444; background-color: #fef2f2; margin-bottom: 30px;">
-        <h4 style="color: #b91c1c;"><i class="fas fa-robot"></i> Caution: AI-Enhanced Notes</h4>
-        <p>
-            <strong>Notice:</strong> These final-term notes have been edited with the assistance of AI. While class lectures and official slides were used as primary references, there remains a possibility that AI-generated content may contain inaccuracies or unintended hallucinations.
-        </p>
-        <p class="small-text"><em>*If you encounter any confusion while studying, please consult the original lecture slides for verification.</em></p>
-    </div>
+            <div class="info-box" style="border-left-color: #ef4444; background-color: #fef2f2; margin-bottom: 30px;">
+                <h4 style="color: #b91c1c;"><i class="fas fa-robot"></i> Caution: AI-Enhanced Notes</h4>
+                <p>
+                    <strong>Notice:</strong> These final-term notes have been edited with the assistance of AI. While class lectures and official slides were used as primary references, there remains a possibility that AI-generated content may contain inaccuracies or unintended hallucinations.
+                </p>
+                <p class="small-text"><em>*If you encounter any confusion while studying, please consult the original lecture slides for verification.</em></p>
+            </div>
 
-    <div class="resources-container">
-        <h3 class="res-title">📚 Final Resources</h3>
-        
-        <div class="resources-grid">
-            <a href="https://drive.google.com/drive/folders/1XAJQx45u_ZL-LPZAMtcI5eOJ_Hwv_KX2" target="_blank" class="resource-card question-card">
-                <span class="icon"><i class="fas fa-folder-open"></i></span>
-                <span class="text">Previous Final Questions (Drive)</span>
-                <span class="arrow">➔</span>
-            </a>
+            <div class="resources-container">
+                <h3 class="res-title">📚 Final Resources</h3>
+                
+                <div class="resources-grid">
+                    <div class="resource-group">
+                        <div class="resource-card question-card" onclick="toggleTrimesterList()">
+                            <span class="icon"><i class="fas fa-history"></i></span>
+                            <span class="text">Last 3 Trimester Questions</span>
+                            <span class="arrow" id="trimesterArrow">▼</span>
+                        </div>
+                        <div id="trimesterList" class="batch-list hidden">
+                            <a href="notes/final_q_251.pdf" target="_blank" class="batch-btn">Batch 251</a>
+                            <a href="notes/final_q_252.pdf" target="_blank" class="batch-btn">Batch 252</a>
+                            <a href="notes/final_q_243.pdf" target="_blank" class="batch-btn">Batch 243</a>
+                        </div>
+                    </div>
 
-            <a href="https://nurulalamador.github.io/UIUQuestionBank/questions.html?term=final&id=SOC2101" target="_blank" class="resource-card question-card">
-                <span class="icon"><i class="fas fa-university"></i></span>
-                <span class="text">UIU Question Bank</span>
-                <span class="arrow">➔</span>
-            </a>
+                    <a href="https://drive.google.com/drive/folders/1XAJQx45u_ZL-LPZAMtcI5eOJ_Hwv_KX2" target="_blank" class="resource-card question-card">
+                        <span class="icon"><i class="fas fa-folder-open"></i></span>
+                        <span class="text">Previous Final Questions (Drive)</span>
+                        <span class="arrow">➔</span>
+                    </a>
 
-            <a href="https://drive.google.com/drive/folders/1ibSA4CmrwJ4o5Gx1yxRZz9WsNKiPHlor" target="_blank" class="resource-card question-card">
-    <span class="icon"><i class="fas fa-file-powerpoint"></i></span>
-    <span class="text">Lecture Slides (Drive)</span>
-    <span class="arrow">➔</span>
-</a>
+                    <a href="https://nurulalamador.github.io/UIUQuestionBank/questions.html?term=final&id=SOC2101" target="_blank" class="resource-card question-card">
+                        <span class="icon"><i class="fas fa-university"></i></span>
+                        <span class="text">UIU Question Bank</span>
+                        <span class="arrow">➔</span>
+                    </a>
 
-            <a href="https://www.ieee.org/about/corporate/governance/p7-8" target="_blank" class="resource-card" style="background-color: #f0f9ff; color: #0369a1; border-color: #bae6fd;">
-                <span class="icon"><i class="fas fa-balance-scale"></i></span>
-                <span class="text">IEEE CODES OF ETHICS</span>
-                <span class="arrow">➔</span>
-            </a>
+                    <a href="https://drive.google.com/drive/folders/1ibSA4CmrwJ4o5Gx1yxRZz9WsNKiPHlor" target="_blank" class="resource-card question-card">
+                        <span class="icon"><i class="fas fa-file-powerpoint"></i></span>
+                        <span class="text">Lecture Slides (Drive)</span>
+                        <span class="arrow">➔</span>
+                    </a>
 
-            <a href="https://www.acm.org/code-of-ethics" target="_blank" class="resource-card" style="background-color: #f0f9ff; color: #0369a1; border-color: #bae6fd;">
-                <span class="icon"><i class="fas fa-gavel"></i></span>
-                <span class="text">ACM CODES OF ETHICS</span>
-                <span class="arrow">➔</span>
-            </a>
-        </div>
-    </div>
+                    <a href="https://drive.google.com/drive/folders/151rQyJdgEtqefD6ZJg93lcSj-JZOWXkC" target="_blank" class="resource-card" style="background-color: #fef3c7; color: #92400e; border-color: #fde68a;">
+                        <span class="icon"><i class="fas fa-copy"></i></span>
+                        <span class="text">Final Reports (Previous Years)</span>
+                        <span class="arrow">➔</span>
+                    </a>
 
-    <h3 class="res-title" style="margin-top: 40px;">📝 After Mid</h3>
-    <p class="instruction">Click on a lecture to open the PDF note.</p>
+                    <a href="notes/our_report.pdf" target="_blank" class="resource-card" style="background-color: #ecfdf5; color: #065f46; border-color: #a7f3d0;">
+                        <span class="icon"><i class="fas fa-file-alt"></i></span>
+                        <span class="text">Our Report (PDF)</span>
+                        <span class="arrow">➔</span>
+                    </a>
 
-    <div class="topic-list">
-        <a href="notes/lec 1 code of ethics notes.pdf" target="_blank" class="topic-card">
-            <span class="topic-num">Lec-01</span>
-            <span class="topic-name">ENGINEERING CODES OF ETHICS</span>
-            <span class="arrow"><i class="fas fa-arrow-right"></i></span>
-        </a>
-    </div>
+                    <a href="notes/our_presentation.pptx" target="_blank" class="resource-card" style="background-color: #fff1f2; color: #9f1239; border-color: #fecdd3;">
+                        <span class="icon"><i class="fas fa-file-powerpoint"></i></span>
+                        <span class="text">Our Presentation (PPT)</span>
+                        <span class="arrow">➔</span>
+                    </a>
 
-    <div class="message-box" style="margin-top: 40px; padding: 20px; border-color: #16a34a; border-style: dashed; background-color: #f0fdf4;">
-        <p style="margin: 0; color: #16a34a; font-weight: 500;">
-            <i class="fas fa-spinner fa-spin"></i> Lecture is ongoing... Site will be updated regularly.
-        </p>
-    </div>
-</section>
+                    <a href="https://www.ieee.org/about/corporate/governance/p7-8" target="_blank" class="resource-card" style="background-color: #f0f9ff; color: #0369a1; border-color: #bae6fd;">
+                        <span class="icon"><i class="fas fa-balance-scale"></i></span>
+                        <span class="text">IEEE CODES OF ETHICS</span>
+                        <span class="arrow">➔</span>
+                    </a>
+
+                    <a href="https://www.acm.org/code-of-ethics" target="_blank" class="resource-card" style="background-color: #f0f9ff; color: #0369a1; border-color: #bae6fd;">
+                        <span class="icon"><i class="fas fa-gavel"></i></span>
+                        <span class="text">ACM CODES OF ETHICS</span>
+                        <span class="arrow">➔</span>
+                    </a>
+                </div>
+            </div>
+
+            <h3 class="res-title" style="margin-top: 40px;">📝 After Mid</h3>
+            <p class="instruction">Click on a lecture to open the PDF note.</p>
+
+            <div class="topic-list">
+                <a href="notes/lec 1 code of ethics notes.pdf" target="_blank" class="topic-card">
+                    <span class="topic-num">Lec-01</span>
+                    <span class="topic-name">ENGINEERING CODES OF ETHICS</span>
+                    <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a href="notes/lec 2 ethics in ml.pdf" target="_blank" class="topic-card">
+                    <span class="topic-num">Lec-02</span>
+                    <span class="topic-name">ETHICS IN MACHINE LEARNING!</span>
+                    <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+
+            <div class="message-box" style="margin-top: 40px; padding: 20px; border-color: #16a34a; border-style: dashed; background-color: #f0fdf4;">
+                <p style="margin: 0; color: #16a34a; font-weight: 500;">
+                    <i class="fas fa-spinner fa-spin"></i> Lecture is ongoing... Site will be updated regularly.
+                </p>
+            </div>
+        </section>
 
     </main>
 
