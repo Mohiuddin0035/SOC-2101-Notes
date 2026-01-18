@@ -5,7 +5,6 @@ function showSection(sectionId) {
         section.classList.remove('active');
         section.classList.add('hidden');
     });
-
     const target = document.getElementById(sectionId);
     if (target) {
         target.classList.remove('hidden');
@@ -14,11 +13,10 @@ function showSection(sectionId) {
     window.scrollTo(0, 0);
 }
 
-// 2. Toggle "Previous Mid Questions" Dropdown
-function toggleBatchList() {
-    const list = document.getElementById('batchList');
-    const arrow = document.getElementById('batchArrow');
-    
+// 2. Generic Toggle Function
+function toggleVisibility(listId, arrowId) {
+    const list = document.getElementById(listId);
+    const arrow = document.getElementById(arrowId);
     if (list.classList.contains('hidden')) {
         list.classList.remove('hidden');
         arrow.classList.add('rotate-arrow');
@@ -28,7 +26,16 @@ function toggleBatchList() {
     }
 }
 
-// 3. Scroll Animation for Tribute Section
+// 3. Category Toggles
+function toggleQSList() { toggleVisibility('qsList', 'qsArrow'); }
+function toggleRPList() { toggleVisibility('rpList', 'rpArrow'); }
+function toggleCEList() { toggleVisibility('ceList', 'ceArrow'); }
+
+// 4. Trimester Toggles
+function toggleTrimesterList() { toggleVisibility('trimesterList', 'trimesterArrow'); }
+function toggleTrimesterSolList() { toggleVisibility('trimesterSolList', 'trimesterSolArrow'); }
+
+// 5. Scroll Animation
 document.addEventListener("DOMContentLoaded", function() {
     const tributeText = document.querySelector('.tribute-col-text');
     const observer = new IntersectionObserver((entries) => {
@@ -39,38 +46,5 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }, { threshold: 0.3 });
-
-    if(tributeText) {
-         observer.observe(tributeText);
-    }
+    if(tributeText) { observer.observe(tributeText); }
 });
-
-// 4. Toggle "Previous Final Questions" Dropdown (If still needed)
-function toggleFinalBatchList() {
-    const list = document.getElementById('finalBatchList');
-    const arrow = document.getElementById('finalBatchArrow');
-    
-    if (list && arrow) {
-        if (list.classList.contains('hidden')) {
-            list.classList.remove('hidden');
-            arrow.classList.add('rotate-arrow');
-        } else {
-            list.classList.add('hidden');
-            arrow.classList.remove('rotate-arrow');
-        }
-    }
-}
-
-// 5. Toggle "Last 3 Trimester Questions" Dropdown
-function toggleTrimesterList() {
-    const list = document.getElementById('trimesterList');
-    const arrow = document.getElementById('trimesterArrow');
-    
-    if (list.classList.contains('hidden')) {
-        list.classList.remove('hidden');
-        arrow.classList.add('rotate-arrow');
-    } else {
-        list.classList.add('hidden');
-        arrow.classList.remove('rotate-arrow');
-    }
-}

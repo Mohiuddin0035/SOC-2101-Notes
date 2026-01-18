@@ -19,7 +19,6 @@
     <main class="container main-content-container">
         
         <section id="home" class="active">
-            
             <div class="welcome-box">
                 <h2>Hi.....! 👋</h2>
                 <p>Which notes are you looking for today?</p>
@@ -31,7 +30,6 @@
                     <h3>Mid Term</h3>
                     <p>Topics 1-9</p>
                 </div>
-
                 <div class="term-card final" onclick="showSection('final')">
                     <div class="icon"><i class="fas fa-graduation-cap"></i></div>
                     <h3>Final Term</h3>
@@ -41,23 +39,17 @@
 
             <div class="tribute-spacer">
                 <div class="tribute-card-pitch">
-                    
                     <div class="tribute-col-img-wrapper">
                         <img src="images/hadi_bhai.jpg" alt="Sharif Osman Bin Hadi" class="tribute-photo-card">
                     </div>
-                    
                     <div class="tribute-col-text scroll-hidden">
-                        
                         <p class="prayer-request">
                             <i class="fas fa-hands-praying"></i> If this small effort brings you even a little benefit, please keep <strong>Hadi bhai</strong> in your prayers.
                         </p>
-
                         <hr class="tribute-divider">
-                        
                         <blockquote class="eulogy">
                             As I was completing this work, our country lost not just a man, but a fearless voice—a voice that dared to speak when silence was easier.
                         </blockquote>
-
                         <div class="tribute-footer">
                             <h2 class="name">SHARIF OSMAN BIN HADI</h2>
                             <p class="dates">
@@ -69,7 +61,6 @@
                     </div>
                 </div>
             </div>
-
         </section>
 
         <section id="mid" class="hidden">
@@ -77,76 +68,11 @@
                 <button class="back-btn" onclick="showSection('home')">← Back</button>
                 <h2>📘 Mid Term Topics</h2>
             </div>
-
             <div class="info-box">
                 <h4><i class="fas fa-pen-fancy"></i> A Note on Legibility</h4>
-                <p>
-                    My handwriting has its own unique "font" which might occasionally be tricky to decipher. 😅 If you find any word unclear:
-                </p>
-                <ul>
-                    <li><strong>Step 1:</strong> Take a screenshot and ask <em>ChatGPT</em> to transcribe it (it works wonders!).</li>
-                    <li><strong>Step 2:</strong> If you are still stuck, you can WhatsApp me at <strong>01701949270</strong>.</li>
-                </ul>
-                <p class="small-text"><em>*Please use Step 2 only if absolutely necessary. Happy studying!</em></p>
+                <p>My handwriting has its own unique "font"... 😅</p>
             </div>
-
-            <div class="resources-container">
-                <h3 class="res-title">📚 Extra Resources</h3>
-                
-                <div class="resources-grid">
-                    <a href="notes/mid_solve.pdf" target="_blank" class="resource-card solve-card">
-                        <span class="icon"><i class="fas fa-check-circle"></i></span>
-                        <span class="text">Mid Question Solves</span>
-                        <span class="arrow">➔</span>
-                    </a>
-
-                    <div class="resource-group">
-                        <div class="resource-card question-card" onclick="toggleBatchList()">
-                            <span class="icon"><i class="fas fa-question-circle"></i></span>
-                            <span class="text">Previous Mid Questions</span>
-                            <span class="arrow" id="batchArrow">▼</span>
-                        </div>
-                        <div id="batchList" class="batch-list hidden">
-                            <a href="notes/question_243.pdf" target="_blank" class="batch-btn">Batch 243</a>
-                            <a href="notes/question_251.pdf" target="_blank" class="batch-btn">Batch 251</a>
-                            <a href="notes/question_252.pdf" target="_blank" class="batch-btn">Batch 252</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <p class="instruction" style="margin-top: 25px;">Click on a topic to open the PDF note in a new tab.</p>
-
-            <div class="topic-list">
-                <a href="notes/topic1.pdf" target="_blank" class="topic-card">
-                    <span class="topic-num">01</span><span class="topic-name">Society & Transformation of Society</span><span class="arrow"><i class="fas fa-arrow-right"></i></span>
-                </a>
-                <a href="notes/topic2.pdf" target="_blank" class="topic-card">
-                    <span class="topic-num">02</span><span class="topic-name">Industrial Revolution & Its Impacts</span><span class="arrow"><i class="fas fa-arrow-right"></i></span>
-                </a>
-                <a href="notes/topic3.pdf" target="_blank" class="topic-card">
-                    <span class="topic-num">03</span><span class="topic-name">Development as a Multidimensional Concept</span><span class="arrow"><i class="fas fa-arrow-right"></i></span>
-                </a>
-                <a href="notes/topic4.pdf" target="_blank" class="topic-card">
-                    <span class="topic-num">04</span><span class="topic-name">SDG and Sustainability</span><span class="arrow"><i class="fas fa-arrow-right"></i></span>
-                </a>
-                <a href="notes/topic5.pdf" target="_blank" class="topic-card">
-                    <span class="topic-num">05</span><span class="topic-name">Responsible Consumption (SDG 12)</span><span class="arrow"><i class="fas fa-arrow-right"></i></span>
-                </a>
-                <a href="notes/topic6.pdf" target="_blank" class="topic-card">
-                    <span class="topic-num">06</span><span class="topic-name">Modern Society</span><span class="arrow"><i class="fas fa-arrow-right"></i></span>
-                </a>
-                <a href="notes/topic7.pdf" target="_blank" class="topic-card">
-                    <span class="topic-num">07</span><span class="topic-name">Renewable Energy</span><span class="arrow"><i class="fas fa-arrow-right"></i></span>
-                </a>
-                <a href="notes/topic8.pdf" target="_blank" class="topic-card">
-                    <span class="topic-num">08</span><span class="topic-name">Solid Waste Management</span><span class="arrow"><i class="fas fa-arrow-right"></i></span>
-                </a>
-                <a href="notes/topic9.pdf" target="_blank" class="topic-card">
-                    <span class="topic-num">09</span><span class="topic-name">Industrial & Development Crisis on Environment</span><span class="arrow"><i class="fas fa-arrow-right"></i></span>
-                </a>
-            </div>
-        </section>
+            </section>
 
         <section id="final" class="hidden">
             <div class="section-header">
@@ -156,107 +82,106 @@
 
             <div class="info-box" style="border-left-color: #ef4444; background-color: #fef2f2; margin-bottom: 30px;">
                 <h4 style="color: #b91c1c;"><i class="fas fa-robot"></i> Caution: AI-Enhanced Notes</h4>
-                <p>
-                    <strong>Notice:</strong> These final-term notes have been edited with the assistance of AI. While class lectures and official slides were used as primary references, there remains a possibility that AI-generated content may contain inaccuracies or unintended hallucinations.
-                </p>
-                <p class="small-text"><em>*If you encounter any confusion while studying, please consult the original lecture slides for verification.</em></p>
+                <p><strong>Notice:</strong> AI may contain inaccuracies or unintended hallucinations.</p>
             </div>
 
             <div class="resources-container">
                 <h3 class="res-title">📚 Final Resources</h3>
                 
                 <div class="resources-grid">
+                    
                     <div class="resource-group">
-                        <div class="resource-card question-card" onclick="toggleTrimesterList()">
-                            <span class="icon"><i class="fas fa-history"></i></span>
-                            <span class="text">Last 3 Trimester Questions</span>
-                            <span class="arrow" id="trimesterArrow">▼</span>
+                        <div class="resource-card" onclick="toggleQSList()" style="background-color: #f0fdf4; border-color: #16a34a; color: #166534;">
+                            <span class="icon"><i class="fas fa-folder"></i></span>
+                            <span class="text">Questions and Slides</span>
+                            <span class="arrow" id="qsArrow">▼</span>
                         </div>
-                        <div id="trimesterList" class="batch-list hidden">
-                            <a href="notes/final_q_251.pdf" target="_blank" class="batch-btn">Batch 251</a>
-                            <a href="notes/final_q_252.pdf" target="_blank" class="batch-btn">Batch 252</a>
-                            <a href="notes/final_q_243.pdf" target="_blank" class="batch-btn">Batch 243</a>
+                        <div id="qsList" class="batch-list hidden" style="flex-direction: column; align-items: stretch; padding-left: 15px; gap: 10px;">
+                            <div class="resource-group">
+                                <div class="resource-card" onclick="toggleTrimesterList()" style="font-size: 0.9rem;">
+                                    <span class="text">Last 3 Trimester Questions</span>
+                                    <span class="arrow" id="trimesterArrow">▼</span>
+                                </div>
+                                <div id="trimesterList" class="batch-list hidden">
+                                    <a href="notes/final_q_251.pdf" target="_blank" class="batch-btn">251</a>
+                                    <a href="notes/final_q_252.pdf" target="_blank" class="batch-btn">252</a>
+                                    <a href="notes/final_q_243.pdf" target="_blank" class="batch-btn">243</a>
+                                </div>
+                            </div>
+
+                            <div class="resource-group">
+                                <div class="resource-card" onclick="toggleTrimesterSolList()" style="font-size: 0.9rem;">
+                                    <span class="text">Last 3 Trimester Solutions</span>
+                                    <span class="arrow" id="trimesterSolArrow">▼</span>
+                                </div>
+                                <div id="trimesterSolList" class="batch-list hidden">
+                                    <a href="notes/final_sol_251.pdf" target="_blank" class="batch-btn">251</a>
+                                    <a href="notes/final_sol_232.pdf" target="_blank" class="batch-btn">232</a>
+                                    <a href="notes/final_sol_233.pdf" target="_blank" class="batch-btn">233</a>
+                                </div>
+                            </div>
+
+                            <a href="https://drive.google.com/drive/folders/1XAJQx45u_ZL-LPZAMtcI5eOJ_Hwv_KX2" target="_blank" class="resource-card" style="font-size: 0.9rem;">
+                                <span class="text">Previous Final Questions (Drive)</span>➔
+                            </a>
+                            <a href="https://nurulalamador.github.io/UIUQuestionBank/questions.html?term=final&id=SOC2101" target="_blank" class="resource-card" style="font-size: 0.9rem;">
+                                <span class="text">UIU Question Bank</span>➔
+                            </a>
+                            <a href="https://drive.google.com/drive/folders/1ibSA4CmrwJ4o5Gx1yxRZz9WsNKiPHlor" target="_blank" class="resource-card" style="font-size: 0.9rem;">
+                                <span class="text">Lecture Slides (Drive)</span>➔
+                            </a>
                         </div>
                     </div>
 
-                    <a href="https://drive.google.com/drive/folders/1XAJQx45u_ZL-LPZAMtcI5eOJ_Hwv_KX2" target="_blank" class="resource-card question-card">
-                        <span class="icon"><i class="fas fa-folder-open"></i></span>
-                        <span class="text">Previous Final Questions (Drive)</span>
-                        <span class="arrow">➔</span>
-                    </a>
+                    <div class="resource-group">
+                        <div class="resource-card" onclick="toggleRPList()" style="background-color: #fff1f2; border-color: #e11d48; color: #9f1239;">
+                            <span class="icon"><i class="fas fa-file-invoice"></i></span>
+                            <span class="text">Reports and Presentation</span>
+                            <span class="arrow" id="rpArrow">▼</span>
+                        </div>
+                        <div id="rpList" class="batch-list hidden" style="flex-direction: column; align-items: stretch; padding-left: 15px; gap: 10px;">
+                            <a href="https://drive.google.com/drive/folders/151rQyJdgEtqefD6ZJg93lcSj-JZOWXkC" target="_blank" class="resource-card" style="font-size: 0.9rem;">
+                                <span class="text">Final Reports (Previous Years)</span>➔
+                            </a>
+                            <a href="notes/our_report.pdf" target="_blank" class="resource-card" style="font-size: 0.9rem;">
+                                <span class="text">Our Report (PDF)</span>➔
+                            </a>
+                            <a href="https://docs.google.com/presentation/d/1X1Mqpgw3wnhZgrDKnlP4qVA3861pqRdvKoDxxUMwYLk/edit?usp=sharing" target="_blank" class="resource-card" style="font-size: 0.9rem;">
+                                <span class="text">Our Presentation (Google Slides)</span>➔
+                            </a>
+                        </div>
+                    </div>
 
-                    <a href="https://nurulalamador.github.io/UIUQuestionBank/questions.html?term=final&id=SOC2101" target="_blank" class="resource-card question-card">
-                        <span class="icon"><i class="fas fa-university"></i></span>
-                        <span class="text">UIU Question Bank</span>
-                        <span class="arrow">➔</span>
-                    </a>
+                    <div class="resource-group">
+                        <div class="resource-card" onclick="toggleCEList()" style="background-color: #f5f3ff; border-color: #7c3aed; color: #5b21b6;">
+                            <span class="icon"><i class="fas fa-gavel"></i></span>
+                            <span class="text">CODES OF ETHICS</span>
+                            <span class="arrow" id="ceArrow">▼</span>
+                        </div>
+                        <div id="ceList" class="batch-list hidden" style="flex-direction: column; align-items: stretch; padding-left: 15px; gap: 10px;">
+                            <a href="https://www.ieee.org/about/corporate/governance/p7-8" target="_blank" class="resource-card" style="font-size: 0.9rem;">
+                                <span class="text">IEEE CODES OF ETHICS</span>➔
+                            </a>
+                            <a href="https://www.acm.org/code-of-ethics" target="_blank" class="resource-card" style="font-size: 0.9rem;">
+                                <span class="text">ACM CODES OF ETHICS</span>➔
+                            </a>
+                        </div>
+                    </div>
 
-                    <a href="https://drive.google.com/drive/folders/1ibSA4CmrwJ4o5Gx1yxRZz9WsNKiPHlor" target="_blank" class="resource-card question-card">
-                        <span class="icon"><i class="fas fa-file-powerpoint"></i></span>
-                        <span class="text">Lecture Slides (Drive)</span>
-                        <span class="arrow">➔</span>
-                    </a>
-
-                    <a href="https://drive.google.com/drive/folders/151rQyJdgEtqefD6ZJg93lcSj-JZOWXkC" target="_blank" class="resource-card" style="background-color: #fef3c7; color: #92400e; border-color: #fde68a;">
-                        <span class="icon"><i class="fas fa-copy"></i></span>
-                        <span class="text">Final Reports (Previous Years)</span>
-                        <span class="arrow">➔</span>
-                    </a>
-
-                    <a href="notes/our_report.pdf" target="_blank" class="resource-card" style="background-color: #ecfdf5; color: #065f46; border-color: #a7f3d0;">
-                        <span class="icon"><i class="fas fa-file-alt"></i></span>
-                        <span class="text">Our Report (PDF)</span>
-                        <span class="arrow">➔</span>
-                    </a>
-
-                    <a href="notes/our_presentation.pptx" target="_blank" class="resource-card" style="background-color: #fff1f2; color: #9f1239; border-color: #fecdd3;">
-                        <span class="icon"><i class="fas fa-file-powerpoint"></i></span>
-                        <span class="text">Our Presentation (PPT)</span>
-                        <span class="arrow">➔</span>
-                    </a>
-
-                    <a href="https://www.ieee.org/about/corporate/governance/p7-8" target="_blank" class="resource-card" style="background-color: #f0f9ff; color: #0369a1; border-color: #bae6fd;">
-                        <span class="icon"><i class="fas fa-balance-scale"></i></span>
-                        <span class="text">IEEE CODES OF ETHICS</span>
-                        <span class="arrow">➔</span>
-                    </a>
-
-                    <a href="https://www.acm.org/code-of-ethics" target="_blank" class="resource-card" style="background-color: #f0f9ff; color: #0369a1; border-color: #bae6fd;">
-                        <span class="icon"><i class="fas fa-gavel"></i></span>
-                        <span class="text">ACM CODES OF ETHICS</span>
-                        <span class="arrow">➔</span>
-                    </a>
                 </div>
             </div>
 
             <h3 class="res-title" style="margin-top: 40px;">📝 After Mid</h3>
-            <p class="instruction">Click on a lecture to open the PDF note.</p>
-
             <div class="topic-list">
                 <a href="notes/lec 1 code of ethics notes.pdf" target="_blank" class="topic-card">
-                    <span class="topic-num">Lec-01</span>
-                    <span class="topic-name">ENGINEERING CODES OF ETHICS</span>
-                    <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+                    <span class="topic-num">Lec-01</span><span class="topic-name">ENGINEERING CODES OF ETHICS</span>➔
                 </a>
                 <a href="notes/lec 2 ethics in ml.pdf" target="_blank" class="topic-card">
-                    <span class="topic-num">Lec-02</span>
-                    <span class="topic-name">ETHICS IN MACHINE LEARNING!</span>
-                    <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+                    <span class="topic-num">Lec-02</span><span class="topic-name">ETHICS IN MACHINE LEARNING!</span>➔
                 </a>
             </div>
-
-            <div class="message-box" style="margin-top: 40px; padding: 20px; border-color: #16a34a; border-style: dashed; background-color: #f0fdf4;">
-                <p style="margin: 0; color: #16a34a; font-weight: 500;">
-                    <i class="fas fa-spinner fa-spin"></i> Lecture is ongoing... Site will be updated regularly.
-                </p>
-            </div>
         </section>
-
     </main>
-
-    <footer>
-        <p>SOC 2101 • Built by Saikat</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>
