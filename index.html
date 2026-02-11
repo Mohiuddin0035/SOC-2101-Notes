@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SOC 2101 Handnotes</title>
@@ -19,8 +21,15 @@
     <main class="container main-content-container">
         
         <section id="home" class="active">
+
+            <div class="verse-glass-container">
+    <div class="arabic-verse">إِنَّ مَعَ الْعُسْرِ يُسْرًا</div>
+    <div class="translation">"For surely, with hardship comes ease"</div>
+    <div class="reference">Surah Ash-Sharh 94:6</div>
+</div>
+
             <div class="welcome-box">
-                <h2>Hi.....! 👋</h2>
+                <h2>Assalamu alaikum ٱلسَّلَامُ عَلَيْكُمْ 🤓</h2>
                 <p>Which notes are you looking for today?</p>
             </div>
 
@@ -28,12 +37,12 @@
                 <div class="term-card mid" onclick="showSection('mid')">
                     <div class="icon"><i class="fas fa-book-open"></i></div>
                     <h3>Mid Term</h3>
-                    <p>Topics 1-9</p>
+                    <p>TOPICS 1-9</p>
                 </div>
                 <div class="term-card final" onclick="showSection('final')">
                     <div class="icon"><i class="fas fa-graduation-cap"></i></div>
                     <h3>Final Term</h3>
-                    <p>Ongoing...</p>
+                    <p>C A S E_A N A L Y S I S</p>
                 </div>
             </div>
 
@@ -173,13 +182,15 @@
                             </div>
                             <div class="resource-group">
                                 <div class="resource-card" onclick="toggleTrimesterSolList()" style="font-size: 0.9rem;">
-                                    <span class="text">Last 3 Trimester Solutions</span>
+                                    <span class="text">Previous Trimester Solutions</span>
                                     <span class="arrow" id="trimesterSolArrow">▼</span>
                                 </div>
                                 <div id="trimesterSolList" class="batch-list hidden">
                                     <a href="notes/final_sol_251.pdf" target="_blank" class="batch-btn">251</a>
                                     <a href="notes/final_sol_232.pdf" target="_blank" class="batch-btn">232</a>
                                     <a href="notes/final_sol_233.pdf" target="_blank" class="batch-btn">233</a>
+                                    <a href="notes/spring 24 solve.pdf" target="_blank" class="batch-btn">241</a>
+                                    <a href="notes/Fall 22 solve.pdf" target="_blank" class="batch-btn">223</a>
                                 </div>
                             </div>
                             <a href="https://drive.google.com/drive/folders/1XAJQx45u_ZL-LPZAMtcI5eOJ_Hwv_KX2" target="_blank" class="resource-card" style="font-size: 0.9rem;">Previous Final Questions (Drive)➔</a>
@@ -236,6 +247,11 @@
     <span class="topic-num">Lec-05</span>
     <span class="topic-name">IMPACT OF COMPUTER TECHNOLOGY ON ENVIRONMENT</span>➔
 </a>
+
+<a href="notes/oneshot.pdf" target="_blank" class="topic-card">
+    <span class="topic-num">Oneshot</span>
+    <span class="topic-name">Last night revision for topic 2,3,4</span>➔
+</a>
             </div>
 
            <div class="message-box completion-card" style="margin-top: 50px; padding: 40px; border: none; background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border-radius: 20px; box-shadow: 0 10px 25px rgba(22, 163, 74, 0.1); text-align: center;">
@@ -255,5 +271,17 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <script>
+    // Celebration trigger for the completion card
+    document.querySelector('.completion-card').addEventListener('click', () => {
+        confetti({
+            particleCount: 150,
+            spread: 70,
+            origin: { y: 0.6 },
+            colors: ['#16a34a', '#15803d', '#fbbf24']
+        });
+    });
+</script>
 </body>
 </html>
